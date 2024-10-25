@@ -2,9 +2,15 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import logo from "../assets/kevinRushLogo.png";
 
+
 const Navbar = () => {
     const handleScroll = (id) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.warn(`Element with id ${id} not found`);
+        }
     };
 
     useEffect(() => {
@@ -75,6 +81,7 @@ const Navbar = () => {
         </StyledWrapper>
     );
 };
+
 
 const StyledWrapper = styled.div`
     .popup {
