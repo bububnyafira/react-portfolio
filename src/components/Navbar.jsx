@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import logo from "../assets/kevinRushLogo.png";
 
-
 const Navbar = () => {
     const handleScroll = (id) => {
         const element = document.getElementById(id);
@@ -82,7 +81,6 @@ const Navbar = () => {
     );
 };
 
-
 const StyledWrapper = styled.div`
     .popup {
         display: inline-block;
@@ -105,7 +103,6 @@ const StyledWrapper = styled.div`
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        overflow: hidden;
         transition: all 0.1s ease-in-out;
     }
 
@@ -131,50 +128,6 @@ const StyledWrapper = styled.div`
         transform: translateY(-50%);
     }
 
-    .popup-window {
-        transform: scale(0.8);
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        background: #eee;
-        padding: 0.625em 0.25em;
-        top: calc(2.125em + 0.125em);
-        right: 0; /* Align dropdown to the right */
-        border-radius: 0.375em;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-        transition: all 0.1s ease-in-out;
-        z-index: 1000; /* Ensure dropdown is above other elements */
-    }
-
-    .popup-window ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .popup-window ul li {
-        margin-bottom: 0.5em;
-    }
-
-    .popup-window ul li button {
-        display: block;
-        width: 100%;
-        background: none;
-        border: none;
-        padding: 0.375em 1rem;
-        text-align: left;
-        color: #333;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background 0.3s, color 0.3s;
-        border-radius: 0.375em;
-    }
-
-    .popup-window ul li button:hover {
-        background: rgba(128, 128, 128, 0.3); /* Transparent gray */
-        color: #fff;
-    }
-
     .popup input:checked + .burger span:nth-child(1) {
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
@@ -195,7 +148,77 @@ const StyledWrapper = styled.div`
         opacity: 1;
     }
 
-    /* Media query to hide the burger icon on larger screens */
+    .popup-window {
+        transform: scale(0.8);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background: none;
+        padding: 0.625em 0.25em;
+        top: calc(2.125em + 0.125em);
+        right: 0; /* Align dropdown to the right */
+        border-radius: 0.375em;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+        z-index: 1000; /* Ensure dropdown is above other elements */
+    }
+
+    .popup-window ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .popup-window ul li {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5em;
+    }
+
+    .popup-window ul li button {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0.375em 1rem;
+        text-align: center;
+        color: #e1e1e1;
+        font-size: 16px;
+        font-family: 'Inter';
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color, background;
+        border-radius: 0.375em;
+    }
+
+    .popup-window ul li button:hover,
+    .popup-window ul li button:focus {
+        color: #fff;
+    }
+
+    .popup-window ul li button:after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }
+
+    .popup-window ul li button:hover:after,
+    .popup-window ul li button:focus:after {
+        width: 100%;
+        left: 0%;
+    }
+
     @media (min-width: 768px) {
         .burger {
             display: none;

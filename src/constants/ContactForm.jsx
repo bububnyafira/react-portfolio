@@ -99,7 +99,13 @@ const StyledWrapper = styled.div`
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #9b9b9b;
+    color: #.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  };
     pointer-events: none;
   }
 
@@ -107,13 +113,13 @@ const StyledWrapper = styled.div`
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image: linear-gradient(to right, #ffffff, #ffffff);
     border-image-slice: 1;
   }
 
   .form__field:focus ~ .form__label {
     font-size: 17px;
-    color: #38caef;
+    color: #ffffff;
     font-weight: 700;
   }
 

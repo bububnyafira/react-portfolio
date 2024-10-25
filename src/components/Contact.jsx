@@ -1,7 +1,6 @@
 import ContactForm from "../constants/ContactForm";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -21,7 +20,7 @@ const Contact = () => {
           transition={{ duration: 1.5 }} 
           className="flex justify-center gap-4 text-2xl">
         <a 
-          href="https://www.linkedin.com/in/yourLinkedInProfile" 
+          href="https://www.linkedin.com/in/a-vhandy-3a39bb216/" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="transition duration-300 ease-in-out hover:text-blue-500"
@@ -29,7 +28,7 @@ const Contact = () => {
           <FaLinkedin />
         </a>
         <a 
-          href="https://github.com/yourGitHubProfile" 
+          href="https://github.com/bububnyafira" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="transition duration-300 ease-in-out hover:text-gray-800"
@@ -37,15 +36,7 @@ const Contact = () => {
           <FaGithub />
         </a>
         <a 
-          href="https://twitter.com/yourTwitterProfile" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="transition duration-300 ease-in-out hover:text-blue-400"
-        >
-          <FaSquareXTwitter />
-        </a>
-        <a 
-          href="https://instagram.com/yourInstagramProfile" 
+          href="https://www.instagram.com/ba.baan/?next=%2F" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="transition duration-300 ease-in-out hover:text-pink-500"

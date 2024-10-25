@@ -44,7 +44,7 @@ const StyledWrapper = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #6b7280; /* Neutral gray */
+    background-color: #111111; /* Neutral gray */
     border: none;
     font-weight: 600;
     display: flex;
@@ -73,7 +73,7 @@ const StyledWrapper = styled.div`
     width: 140px;
     border-radius: 50px;
     transition-duration: 0.3s;
-    background-color: #4b5563; /* Darker neutral gray on hover */
+    background-color: #111111; /* Darker neutral gray on hover */
     align-items: center;
   }
 
