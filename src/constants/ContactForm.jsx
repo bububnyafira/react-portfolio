@@ -126,13 +126,12 @@ const StyledWrapper = styled.div`
   button {
     font-size: 18px;
     color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
+    font-family: 'Inter';
+    font-weight: 400;
     cursor: pointer;
     position: relative;
     border: none;
     background: none;
-    text-transform: uppercase;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;

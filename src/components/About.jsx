@@ -1,4 +1,4 @@
-import aboutImg from "../assets/about.jpg";
+import personalIMg from "../assets/fndy-personal.jpg"
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -19,8 +19,8 @@ const About = () => {
                 transition={{ duration: 0.5 }} 
                 className="w-full lg:w-1/2 lg:p-8"
             >
-                <div className="flex items-center justify-center">
-                    <img className="rounded-2xl" src={ aboutImg } alt="about" />
+                <div className="flex items-center justify-center mask-image-bottom">
+                    <img className="rounded-2xl" src={ personalIMg } alt="about" />
                 </div>
             </motion.div>
             <motion.div

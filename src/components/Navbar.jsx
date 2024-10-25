@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import logo from "../assets/kevinRushLogo.png";
+import logo from "../assets/fndy-logo.png";
 
 const Navbar = () => {
     const handleScroll = (id) => {
@@ -32,7 +32,7 @@ const Navbar = () => {
             <nav className="mb-20 flex items-center justify-between py-6">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <img className="mx-2 w-10" src={logo} alt="logo" />
+                    <img className="h-[150px] w-[150px]" src={logo} alt="logo" />
                 </div>
 
                 {/* Navigation Buttons for Larger Screens */}
